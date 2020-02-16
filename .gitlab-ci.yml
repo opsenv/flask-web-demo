@@ -14,7 +14,7 @@ unittest-py2.7:
   stage: test
   script:
     - pip install -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com tox
-    - tox -e unittest-py2.7
+    - tox -e py27
   tags:
     - default
 
@@ -22,6 +22,6 @@ unittest-py3.4:
   stage: test
   script:
     - pip install -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com tox
-    - tox -e unittest-py3.4
+    - tox -e py34
   tags:
     - default
