@@ -21,7 +21,7 @@ unittest-py2.7:
 
 docker-deploy:
   stage: deploy
-  srcript: 
+  script: 
     - docker build -t flask-demo .
     - docker run -d -p 15000:5000
   tags:
