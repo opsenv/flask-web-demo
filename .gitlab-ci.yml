@@ -1,6 +1,7 @@
 stages:
   - style
   - test
+  - deploy
 
 pep8:
   stage: style
@@ -15,5 +16,13 @@ unittest-py2.7:
   script:
     - pip install -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com tox
     - tox -e py27
+  tags:
+    - default
+
+docker-deploy:
+  stage: deploy
+  srcript: 
+    - docker build -t flask-demo .
+    - docker run -d -p 15000:5000
   tags:
     - default
