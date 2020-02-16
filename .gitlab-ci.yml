@@ -5,7 +5,7 @@ stages:
 pep8:
   stage: style
   script:
-    - pip install -i http://pypi.douban.com/simple/ tox
+    - pip install -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com tox
     - tox -e pep8
   tags:
     - default
@@ -13,7 +13,7 @@ pep8:
 unittest-py2.7:
   stage: test
   script:
-    - pip install -i http://pypi.douban.com/simple/ tox
+    - pip install -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com tox
     - tox -e py2.7
   tags:
     - default
@@ -21,7 +21,7 @@ unittest-py2.7:
 unittest-py3.4:
   stage: test
   script:
-    - pip install -i http://pypi.douban.com/simple/ tox
+    - pip install -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com tox
     - tox -e py3.4
   tags:
     - default
