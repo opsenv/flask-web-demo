@@ -11,7 +11,7 @@ pep8:
     - default
   
 unittest-py2.7:
-  stage: teset
+  stage: test
   script:
     - pip install tox
     - tox -e py2.7
@@ -19,7 +19,7 @@ unittest-py2.7:
     - default
 
 unittest-py3.4:
-  stage: teset
+  stage: test
   script:
     - pip install tox
     - tox -e py3.4
