@@ -31,8 +31,8 @@ unittest-py3.4:
 docker-deploy:
   stage: deploy
   script: 
-    - docker build -t flask-demo .
+    - docker build -t flask-demo:latest .
     - if [ $(docker ps -qa --filter name=flask-web-demos-xue) ];then docker rm -f flask-web-demos-xue;fi
-    - docker run -d --name flask-web-demos-xue -p 15000:5000
+    - docker run -d --name flask-web-demos-xue -p 15000:5000 flask-demo:latest
   tags:
     - default
