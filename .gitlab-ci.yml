@@ -9,7 +9,7 @@ pep8:
     - pip install -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com tox
     - tox -e pep8
   tags:
-    - default
+    - python2.7
   
 unittest-py2.7:
   stage: test
