@@ -1,4 +1,5 @@
 # Flask Skeleton - 
+[![pipeline status](https://code.xingshulin.com/xuelong/gitlab-flask-web-demo/badges/master/pipeline.svg)](https://code.xingshulin.com/xuelong/gitlab-flask-web-demo/commits/master)
 
 Flask starter project... https://cloud.docker.com
 
