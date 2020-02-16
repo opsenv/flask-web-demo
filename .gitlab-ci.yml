@@ -1,0 +1,27 @@
+stages:
+  - style
+  - test
+
+pep8:
+  stage: style
+  script:
+    - pip install tox
+    - tox -e pep8
+  tags:
+    - default
+  
+unittest-py2.7:
+  stage: teset
+  script:
+    - pip install tox
+    - tox -e py2.7
+  tags:
+    - default
+
+unittest-py3.4:
+  stage: teset
+  script:
+    - pip install tox
+    - tox -e py3.4
+  tags:
+    - default
